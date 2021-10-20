@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "uHXJqix2QAWxooK01b1bWKlS5eXSZWXHX+7vfEyoGzYpGqF0XOHaRuhUx9yw+13aPa2tSCY0g5Jkeb26kGJpEg==",
+  "success": true,
+  "projectFilePath": "C:\\BACKUP_Documents_SSD\\Curso\\DDD\\Presentation\\ImobiliariaTest\\ViewProject\\ViewProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\renan\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

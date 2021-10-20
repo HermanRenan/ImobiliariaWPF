@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cbn1yzMmhzai2F2TmswvkXtGkSpNRGGdHyIsiY0xHuDZOK5fcq/Jrqo4HrvvhJ9cn8wr+pepV22rycaTLOW+OA==",
+  "success": true,
+  "projectFilePath": "C:\\BACKUP_Documents_SSD\\Curso\\DDD\\Presentation\\ImobiliariaTest\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\renan\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\renan\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

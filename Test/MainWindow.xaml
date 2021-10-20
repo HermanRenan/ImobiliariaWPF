@@ -1,0 +1,155 @@
+﻿<Window x:Class="ViewProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ViewProject"
+        mc:Ignorable="d"
+        Title="Imobiliaria" Height="700" Width="1100" MaxHeight="700" MaxWidth="1100" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="2" CornerRadius="28" BorderBrush="Black" Height="60">
+                            <Border BorderThickness="2" CornerRadius="27">
+
+                                <Border.BorderBrush>
+                                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5" >
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStop Color="#1C1C1C" Offset="0.2"/>
+                                            <GradientStop Color="#00008B" Offset="0.6"/>
+                                            <GradientStop Color="#1C1C1C" Offset="0.9"/>
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Border.BorderBrush>
+                                <Border BorderThickness="1" CornerRadius="26" BorderBrush="#00008B">
+                                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ClipToBounds="False">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30" />
+                                            <RowDefinition Height="20" />
+                                        </Grid.RowDefinitions>
+                                        <!-- the background for the button -->
+                                        <Rectangle RadiusX="20" RadiusY="30" Grid.RowSpan="2">
+                                            <Rectangle.Fill>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="#473C8B" Offset="0"/>
+                                                        <GradientStop Color="#2F4F4F" Offset="0.9"/>
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                        <!-- the "gel" hilight at the top of the button -->
+                                        <Border Margin="5" CornerRadius="14,14,4,4">
+                                            <Border.Background>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStop Color="#778899" Offset="0.1"/>
+                                                        <GradientStop Color="#00688B" Offset="0.5"/>
+                                                        <GradientStop Color="#104E8B" Offset="0.9"/>
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                        </Border>
+
+                                        <!-- place for the content inside the button to be displayed -->
+                                        <ContentPresenter Grid.RowSpan="2"   
+                              x:Name="PrimaryContent"
+                              HorizontalAlignment="Center" VerticalAlignment="Center"
+                              Margin="{TemplateBinding Padding}" 
+                              Content="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" 
+                              />
+                                    </Grid>
+                                </Border>
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="gold" />
+        </Style>
+    </Window.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="NomeEmpresa" Grid.Column="1" Foreground="#B22222" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" FontWeight="Bold"><Run Language="pt-br" Text="Imobiliaria"/><Run Text=" Popular"/></TextBlock>
+
+
+        <Grid  Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock HorizontalAlignment="Center"  Grid.Row="0" Grid.Column="0" FontSize="25" FontWeight="Bold" Foreground="#B22222">Nome</TextBlock>
+            <TextBox Name="NameSearch" Height="20" Width="170" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0"></TextBox>
+            <Button x:Name="BtnNameSearch" Click="BtnNameSearch_Click" HorizontalAlignment="left"  Height="80" Width="90" Grid.Row="0" Grid.Column="1">Buscar</Button>
+
+            <TextBlock HorizontalAlignment="Center"  Grid.Row="0" Grid.Column="2" FontSize="25" FontWeight="Bold" Foreground="#B22222">Documento</TextBlock>
+            <TextBox Name="DocSearch" Height="20" Width="170" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2"></TextBox>
+            <Button x:Name="BtnDocSearch" Click="BtnDocSearch_Click" HorizontalAlignment="left"  Height="80" Width="90" Grid.Row="0" Grid.Column="3">Buscar</Button>
+        </Grid>
+
+
+        <Grid  Grid.Column="0" Grid.RowSpan="10" Background="DarkKhaki">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Button Content="Cadastro" Grid.Row="0" Name="Venda" Click="Cadastro_Click" Grid.Column="0" Grid.RowSpan="1"></Button>
+
+            <Button Content="Sair" Grid.Row="2" Name="Sair"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.RowSpan="8" Margin="5,10,-5,-10">
+            <DataGrid AutoGenerateColumns="False" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="3" Height="440" Background="FloralWhite" Visibility="Visible" Margin="10,65,10,10" DataContext="{Binding ListaGeralCartaoCred}"  CanUserAddRows="False" Name="ConteudoCred" >
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Opções" Width="140">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Width="60" Name="Button1" Click="Edit_Click" Content="Editar" />
+                                    <Button Width="60" Name="Button2" Click="Delete_Click" Content="Deletar" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Visibility="Hidden" Binding="{Binding Id}"  Header="Id"/>
+                    <DataGridTextColumn Visibility="Visible" Binding="{Binding Name}"  Header="Name"/>
+                    <DataGridTextColumn Visibility="Visible" Binding="{Binding Telefone}"  Header="Telefone"/>
+                    <DataGridTextColumn Visibility="Visible" Binding="{Binding Endereço}"  Header="Endereço"/>
+                    <DataGridTextColumn Visibility="Visible" Binding="{Binding Email}"  Header="Email"/>
+                    <DataGridTextColumn Visibility="Visible" Binding="{Binding Tipo}"  Header="Tipo"/>
+                    <DataGridTextColumn Visibility="Visible" Binding="{Binding Documento}"  Header="Documento"/>
+                </DataGrid.Columns>
+                <!--RowBackground="Chocolate"-->
+
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Window>
